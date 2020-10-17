@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://bin.webduino.io/runner -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Webduino Blockly Demo 05</title>
+  <script src="./jquery.min.js.下載"></script>
+  <script src="./webduino-all.min.js.下載"></script>
+  <script src="./MessageTransport.min.js.下載"></script>
+  <script src="./webduino-blockly.min.js.下載"></script>
+  <script src="./firebase.min.js.下載"></script>
+  <script src="./runtime.min.js.下載"></script>
+  <script src="./BitLedMatrix-blockly.js.下載"></script>
+  <script src="./BitLedMatrix.js.下載"></script>
+<link rel="stylesheet" href="./bootstrap.min.css">
+  <script src="./jquery.min.js(1).下載"></script>
+  <script src="./popper.min.js.下載"></script>
+  <script src="./bootstrap.min.js.下載"></script>
+  
+  <style id="jsbin-css">
+.db5 {
+  font-size: 24px;
+  outline: none;
+  margin: 0 10px 10px 0;
+  pointer-events: auto!important;
+}
+
+button:hover {
+  box-shadow: 2px 2px 5px #888;
+}
+</style>
+</head>
+
+<body>
+  <h1><div class="alert alert-info"><strong>房間<strong></strong></strong></div></h1><strong><strong>
+    <div class="alert alert-secondary"><strong><strong>
+    <button id="demo-area-05-btn1" class="btn btn-light">閃亮閃亮亮</button>
+    
+    <button id="demo-area-05-btn2" class="btn btn-warning">陳怡文剋星</button>
+    <button id="demo-area-05-btn3" class="btn btn-danger">剋星</button>
+    <button id="demo-area-05-btn4" class="btn btn-success">hello world</button>
+   
+<script>try {"use strict";
+
+function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } step("next"); }); }; }
+
+_asyncToGenerator(regeneratorRuntime.mark(function _callee9() {
+  var matrix;
+  return regeneratorRuntime.wrap(function _callee9$(_context9) {
+    {;window.runnerWindow.protect.protect({ line: 8, reset: true }); while (1) {;
+if (window.runnerWindow.protect.protect({ line: 8 })) break;
+
+      switch (_context9.prev = _context9.next) {
+        case 0:
+
+          document.getElementById("demo-area-05-btn1").addEventListener("click", _asyncToGenerator(regeneratorRuntime.mark(function _callee() {
+            return regeneratorRuntime.wrap(function _callee$(_context) {
+              while (1) {
+                switch (_context.prev = _context.next) {
+                  case 0:
+                    matrix.setColor("00000000010000000233ccff0300000004000000050000000633ccff0700000008000000090000000a33ccff0b33ccff0c33ccff0d33ccff0e33ccff0f0000001033ccff11000000120000001300000014000000150000001633ccff1700000018000000");
+
+                  case 1:
+                  case "end":
+                    return _context.stop();
+                }
+              }
+            }, _callee, this);
+          })));
+          document.getElementById("demo-area-05-btn2").addEventListener("click", _asyncToGenerator(regeneratorRuntime.mark(function _callee2() {
+            return regeneratorRuntime.wrap(function _callee2$(_context2) {
+              while (1) {
+                switch (_context2.prev = _context2.next) {
+                  case 0:
+                    matrix.setColor("00000000010000000233ff3303000000040000000500000006000000070000000833ff33090000000a33ff330b33ff330c33ff330d33ff330e33ff330f00000010000000110000001233ff331300000014000000150000001633ff331700000018000000");
+
+                  case 1:
+                  case "end":
+                    return _context2.stop();
+                }
+              }
+            }, _callee2, this);
+          })));
+          document.getElementById("demo-area-05-btn3").addEventListener("click", _asyncToGenerator(regeneratorRuntime.mark(function _callee3() {
+            return regeneratorRuntime.wrap(function _callee3$(_context3) {
+              while (1) {
+                switch (_context3.prev = _context3.next) {
+                  case 0:
+                    matrix.setColor("0000000001ff66660200000003ff66660400000005ff66660600000007ff66660800000009ff66660aff66660b0000000c0000000d0000000eff66660f00000010ff66661100000012ff666613000000140000001500000016ff66661700000018000000");
+
+                  case 1:
+                  case "end":
+                    return _context3.stop();
+                }
+              }
+            }, _callee3, this);
+          })));
+
+          boardReady({ board: 'Bit', device: 'bit430b7', transport: 'mqtt' }, (function () {
+            var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee8(board) {
+              return regeneratorRuntime.wrap(function _callee8$(_context8) {
+                while (1) {
+                  switch (_context8.prev = _context8.next) {
+                    case 0:
+                      board.samplingInterval = 250;
+                      matrix = getMatrix(board, 4, 25);
+                      document.getElementById("demo-area-05-btn1").addEventListener("click", _asyncToGenerator(regeneratorRuntime.mark(function _callee4() {
+                        return regeneratorRuntime.wrap(function _callee4$(_context4) {
+                          while (1) {
+                            switch (_context4.prev = _context4.next) {
+                              case 0:
+                                matrix.setColor("0000000001000000020000000300000004ffffff05000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000");
+                                _context4.next = 3;
+                                return delay(0.05);
+
+                              case 3:
+                                matrix.setColor("00000000010000000200000003ffffff04ffffff0500000006000000070000000800000009ffffff0a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000");
+                                _context4.next = 6;
+                                return delay(0.05);
+
+                              case 6:
+                                matrix.setColor("000000000100000002ffffff03ffffff04ffffff05000000060000000700000008ffffff09ffffff0a0000000b0000000c0000000d0000000effffff0f000000100000001100000012000000130000001400000015000000160000001700000018000000");
+                                _context4.next = 9;
+                                return delay(0.05);
+
+                              case 9:
+                                matrix.setColor("0000000001ffffff02ffffff03ffffff04000000050000000600000007ffffff08ffffff09ffffff0a0000000b0000000c0000000dffffff0effffff0f00000010000000110000001200000013ffffff1400000015000000160000001700000018000000");
+                                _context4.next = 12;
+                                return delay(0.05);
+
+                              case 12:
+                                matrix.setColor("00ffffff01ffffff02ffffff03000000040000000500000006ffffff07ffffff08ffffff090000000a0000000b0000000cffffff0dffffff0effffff0f000000100000001100000012ffffff13ffffff1400000015000000160000001700000018ffffff");
+                                _context4.next = 15;
+                                return delay(0.05);
+
+                              case 15:
+                                matrix.setColor("00ffffff01ffffff02000000030000000400000005ffffff06ffffff07ffffff08000000090000000a0000000bffffff0cffffff0dffffff0e0000000f0000001000000011ffffff12ffffff13ffffff14000000150000001600000017ffffff18ffffff");
+                                _context4.next = 18;
+                                return delay(0.05);
+
+                              case 18:
+                                matrix.setColor("00ffffff0100000002000000030000000400000005ffffff06ffffff0700000008000000090000000affffff0bffffff0cffffff0d0000000e0000000f00000010ffffff11ffffff12ffffff13000000140000001500000016ffffff17ffffff18ffffff");
+                                _context4.next = 21;
+                                return delay(0.05);
+
+                              case 21:
+                                matrix.setColor("000000000100000002000000030000000400000005ffffff060000000700000008000000090000000affffff0bffffff0c0000000d0000000e0000000fffffff10ffffff11ffffff12000000130000001400000015ffffff16ffffff17ffffff18000000");
+                                _context4.next = 24;
+                                return delay(0.05);
+
+                              case 24:
+                                matrix.setColor("000000000100000002000000030000000400000005000000060000000700000008000000090000000affffff0b0000000c0000000d0000000e0000000fffffff10ffffff11000000120000001300000014ffffff15ffffff16ffffff1700000018000000");
+                                _context4.next = 27;
+                                return delay(0.05);
+
+                              case 27:
+                                matrix.setColor("000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000fffffff1000000011000000120000001300000014ffffff15ffffff160000001700000018000000");
+                                _context4.next = 30;
+                                return delay(0.05);
+
+                              case 30:
+                                matrix.setColor("000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014ffffff15000000160000001700000018000000");
+                                _context4.next = 33;
+                                return delay(0.05);
+
+                              case 33:
+                                matrix.setColor("000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000");
+                                _context4.next = 36;
+                                return delay(0.05);
+
+                              case 36:
+                              case "end":
+                                return _context4.stop();
+                            }
+                          }
+                        }, _callee4, this);
+                      })));
+                      document.getElementById("demo-area-05-btn2").addEventListener("click", _asyncToGenerator(regeneratorRuntime.mark(function _callee5() {
+                        return regeneratorRuntime.wrap(function _callee5$(_context5) {
+                          while (1) {
+                            switch (_context5.prev = _context5.next) {
+                              case 0:
+                                matrix.setColor("0000000001ff66660200000003ff66660400000005ff666606ff666607ff666608ff666609ff66660aff66660bff66660cff66660dff66660eff66660f00000010ff666611ff666612ff666613000000140000001500000016ff66661700000018000000");
+                                _context5.next = 3;
+                                return delay(1);
+
+                              case 3:
+                              case "end":
+                                return _context5.stop();
+                            }
+                          }
+                        }, _callee5, this);
+                      })));
+                      document.getElementById("demo-area-05-btn3").addEventListener("click", _asyncToGenerator(regeneratorRuntime.mark(function _callee6() {
+                        return regeneratorRuntime.wrap(function _callee6$(_context6) {
+                          while (1) {
+                            switch (_context6.prev = _context6.next) {
+                              case 0:
+                                matrix.setColor("0000000001ff66660200000003ff66660400000005ff66660600000007ff66660800000009ff66660aff66660b0000000c0000000d0000000eff66660f00000010ff66661100000012ff666613000000140000001500000016ff66661700000018000000");
+                                _context6.next = 3;
+                                return delay(1);
+
+                              case 3:
+                              case "end":
+                                return _context6.stop();
+                            }
+                          }
+                        }, _callee6, this);
+                      })));
+                      document.getElementById("demo-area-05-btn4").addEventListener("click", _asyncToGenerator(regeneratorRuntime.mark(function _callee7() {
+                        return regeneratorRuntime.wrap(function _callee7$(_context7) {
+                          while (1) {
+                            switch (_context7.prev = _context7.next) {
+                              case 0:
+                                matrix.setString('helloworld', '#33cc00', 1);
+
+                              case 1:
+                              case "end":
+                                return _context7.stop();
+                            }
+                          }
+                        }, _callee7, this);
+                      })));
+
+                    case 6:
+                    case "end":
+                      return _context8.stop();
+                  }
+                }
+              }, _callee8, this);
+            }));
+
+            return function (_x) {
+              return ref.apply(this, arguments);
+            };
+          })());
+
+        case 4:
+        case "end":
+          return _context9.stop();
+      }
+    }}
+  }, _callee9, this);
+}))();
+} catch (error) { throw error; }
+
+//# sourceURL=lokag.js
+</script>
+</strong></strong></div></strong></strong></body></html>
