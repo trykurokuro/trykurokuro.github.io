@@ -1,0 +1,113 @@
+<!doctype html>
+<!--
+Created using JS Bin
+http://bin.webduino.io
+
+Copyright (c) 2020 by anonymous (http://bin.webduino.io/lokag/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Webduino Blockly Demo 05</title>
+  <script src="https://bit.webduino.io/blockly/components/jquery/dist/jquery.min.js"></script>
+  <script src="https://bit.webduino.io/blockly/dist/lib/webduino-all.min.js"></script>
+  <script src="https://bit.webduino.io/blockly/dist/MessageTransport.min.js"></script>
+  <script src="https://bit.webduino.io/blockly/dist/webduino-blockly.min.js"></script>
+  <script src="https://bit.webduino.io/blockly/dist/lib/firebase.min.js"></script>
+  <script src="https://bit.webduino.io/blockly/dist/lib/runtime.min.js"></script>
+  <script src="https://bit.webduino.io/blockly/components/webduino-bit-module-led-matrix/BitLedMatrix-blockly.js"></script>
+  <script src="https://bit.webduino.io/blockly/components/webduino-bit-module-led-matrix/BitLedMatrix.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <style id="jsbin-css">
+.db5 {
+  font-size: 24px;
+  outline: none;
+  margin: 0 10px 10px 0;
+  pointer-events: auto!important;
+}
+
+button:hover {
+  box-shadow: 2px 2px 5px #888;
+}
+</style>
+</head>
+
+<body>
+  <h1><div class="alert alert-info"><strong>房間<strong></h1>
+    <div class="alert alert-secondary"><strong><strong></h1>
+    <button id="demo-area-05-btn1" class="btn btn-light">閃亮閃亮亮</button>
+    
+    <button id="demo-area-05-btn2" class="btn btn-warning">陳怡文剋星</button>
+    <button id="demo-area-05-btn3" class="btn btn-danger">剋星</button>
+    <button id="demo-area-05-btn4" class="btn btn-success">hello world</button>
+   
+<script id="jsbin-javascript">
+(async function () {
+
+var matrix;
+
+
+document.getElementById("demo-area-05-btn1").addEventListener("click",async function(){
+  matrix.setColor("00000000010000000233ccff0300000004000000050000000633ccff0700000008000000090000000a33ccff0b33ccff0c33ccff0d33ccff0e33ccff0f0000001033ccff11000000120000001300000014000000150000001633ccff1700000018000000");
+});
+document.getElementById("demo-area-05-btn2").addEventListener("click",async function(){
+  matrix.setColor("00000000010000000233ff3303000000040000000500000006000000070000000833ff33090000000a33ff330b33ff330c33ff330d33ff330e33ff330f00000010000000110000001233ff331300000014000000150000001633ff331700000018000000");
+});
+document.getElementById("demo-area-05-btn3").addEventListener("click",async function(){
+  matrix.setColor("0000000001ff66660200000003ff66660400000005ff66660600000007ff66660800000009ff66660aff66660b0000000c0000000d0000000eff66660f00000010ff66661100000012ff666613000000140000001500000016ff66661700000018000000");
+});
+
+boardReady({board: 'Bit', device: 'bit430b7', transport: 'mqtt'}, async function (board) {
+  board.samplingInterval = 250;
+  matrix = getMatrix(board, 4, 25);
+  document.getElementById("demo-area-05-btn1").addEventListener("click",async function(){
+    matrix.setColor("0000000001000000020000000300000004ffffff05000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000");
+    await delay(0.05);
+    matrix.setColor("00000000010000000200000003ffffff04ffffff0500000006000000070000000800000009ffffff0a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000");
+    await delay(0.05);
+    matrix.setColor("000000000100000002ffffff03ffffff04ffffff05000000060000000700000008ffffff09ffffff0a0000000b0000000c0000000d0000000effffff0f000000100000001100000012000000130000001400000015000000160000001700000018000000");
+    await delay(0.05);
+    matrix.setColor("0000000001ffffff02ffffff03ffffff04000000050000000600000007ffffff08ffffff09ffffff0a0000000b0000000c0000000dffffff0effffff0f00000010000000110000001200000013ffffff1400000015000000160000001700000018000000");
+    await delay(0.05);
+    matrix.setColor("00ffffff01ffffff02ffffff03000000040000000500000006ffffff07ffffff08ffffff090000000a0000000b0000000cffffff0dffffff0effffff0f000000100000001100000012ffffff13ffffff1400000015000000160000001700000018ffffff");
+    await delay(0.05);
+    matrix.setColor("00ffffff01ffffff02000000030000000400000005ffffff06ffffff07ffffff08000000090000000a0000000bffffff0cffffff0dffffff0e0000000f0000001000000011ffffff12ffffff13ffffff14000000150000001600000017ffffff18ffffff");
+    await delay(0.05);
+    matrix.setColor("00ffffff0100000002000000030000000400000005ffffff06ffffff0700000008000000090000000affffff0bffffff0cffffff0d0000000e0000000f00000010ffffff11ffffff12ffffff13000000140000001500000016ffffff17ffffff18ffffff");
+    await delay(0.05);
+    matrix.setColor("000000000100000002000000030000000400000005ffffff060000000700000008000000090000000affffff0bffffff0c0000000d0000000e0000000fffffff10ffffff11ffffff12000000130000001400000015ffffff16ffffff17ffffff18000000");
+    await delay(0.05);
+    matrix.setColor("000000000100000002000000030000000400000005000000060000000700000008000000090000000affffff0b0000000c0000000d0000000e0000000fffffff10ffffff11000000120000001300000014ffffff15ffffff16ffffff1700000018000000");
+    await delay(0.05);
+    matrix.setColor("000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000fffffff1000000011000000120000001300000014ffffff15ffffff160000001700000018000000");
+    await delay(0.05);
+    matrix.setColor("000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000120000001300000014ffffff15000000160000001700000018000000");
+    await delay(0.05);
+    matrix.setColor("000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f000000100000001100000012000000130000001400000015000000160000001700000018000000");
+    await delay(0.05);
+  });
+  document.getElementById("demo-area-05-btn2").addEventListener("click",async function(){
+    matrix.setColor("0000000001ff66660200000003ff66660400000005ff666606ff666607ff666608ff666609ff66660aff66660bff66660cff66660dff66660eff66660f00000010ff666611ff666612ff666613000000140000001500000016ff66661700000018000000");
+    await delay(1);
+  });
+  document.getElementById("demo-area-05-btn3").addEventListener("click",async function(){
+    matrix.setColor("0000000001ff66660200000003ff66660400000005ff66660600000007ff66660800000009ff66660aff66660b0000000c0000000d0000000eff66660f00000010ff66661100000012ff666613000000140000001500000016ff66661700000018000000");
+    await delay(1);
+  });
+  document.getElementById("demo-area-05-btn4").addEventListener("click",async function(){
+    matrix.setString('helloworld', '#33cc00', 1);
+  });
+});
+
+}());
+</script>
+</body>
